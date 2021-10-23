@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/private", require("./routes/private"));
 
 // Error Handler (Should be last piece of middleware)
 app.use(errorHandler);
