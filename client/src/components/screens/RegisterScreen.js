@@ -20,7 +20,7 @@ const RegisterScreen = ({ history }) => {
     e.preventDefault();
 
     const config = {
-      header: {
+      headers: {
         "Content-Type": "application/json",
       },
     };
@@ -48,7 +48,7 @@ const RegisterScreen = ({ history }) => {
       localStorage.setItem("authToken", data.token);
 
       history.push("/");
-    } catch (e) {
+    } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
         setError("");
