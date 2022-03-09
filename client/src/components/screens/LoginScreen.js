@@ -37,7 +37,7 @@ const LoginScreen = ({ history }) => {
 
       history.push("/");
     } catch (e) {
-      setError(error.response.data.error);
+      setError(e.response.data.error);
       setTimeout(() => {
         setError("");
       }, 5000);
